@@ -1,0 +1,151 @@
+@primary-color: #2c3e50;
+@secondary-color: #18bc9c;
+@font-stack: 'Arial', sans-serif;
+
+.center-text() {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: @font-stack;
+  color: @primary-color;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: @primary-color;
+  color: white;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+
+  .logo {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    li {
+      margin-left: 20px;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: @secondary-color;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  background-color: @secondary-color;
+  color: white;
+  padding: 100px 0;
+
+  h2 {
+    font-size: 36px;
+    .center-text();
+  }
+
+  p {
+    font-size: 18px;
+    .center-text();
+  }
+}
+
+.content {
+  padding: 50px 0;
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+    th, td {
+      border: 1px solid @primary-color;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: @primary-color;
+      color: white;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid @primary-color;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 150px;
+      padding: 10px;
+      background-color: @primary-color;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: @secondary-color;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: @primary-color;
+  color: white;
+  padding: 15px 0;
+  .center-text();
+}
